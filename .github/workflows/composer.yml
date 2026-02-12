@@ -19,6 +19,12 @@ jobs:
         with:
           php-version: '8.2'
           tools: composer
+          
+      - name: Update composer.lock
+        run: composer update --lock
+
+      - name: Validate composer files
+        run: composer validate --no-check-publish
 
       - name: Install dependencies
         run: composer install --no-interaction --prefer-dist
