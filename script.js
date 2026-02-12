@@ -52,24 +52,22 @@ const button = document.getElementById("valentinesButton");
 const button1 = document.getElementById("valentinesQuestion");
 
 button.addEventListener("click", () => {
-  if (button.textContent === "Click Me! ❤") {
-    button.textContent = "loading...";
-    fetch('send_mail.php')
-      .then(response => {
-        if (response.ok) {
-          button.textContent = "Check Your Email 🙃";
-        } else {
-          console.error('Failed to send email');
-          button.textContent = "Error 😞";
-        }
+    if (button.textContent === "Click Me! ❤") {
+      button.textContent = "loading...";
+
+      emailjs.send("service_33ouevp", "template_rxksdyk", {
+        to_name: "MY BABY",
+        message: "Happy Valentine Week My Love, My Baby, EBOTI. I love you so much ❤"
       })
-      .catch(error => {
-        // Handle network errors or other issues
-        console.error('Error:', error);
+      .then(function(response) {
+        console.log("SUCCESS!", response.status, response.text);
+        button.textContent = "Check Your Email 🙃";
+      }, function(error) {
+        console.log("FAILED...", error);
         button.textContent = "Error 😞";
       });
-  }
-});
+    }
+  });
 
 function drawTextWithLineBreaks(lines, x, y, fontSize, lineHeight) {
     lines.forEach((line, index) => {
