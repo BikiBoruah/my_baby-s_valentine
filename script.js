@@ -49,6 +49,7 @@ function updateStars() {
 }
 
 const button = document.getElementById("valentinesButton");
+const button1 = document.getElementById("valentinesQuestion");
 
 button.addEventListener("click", () => {
   if (button.textContent === "Click Me! ❤") {
@@ -216,6 +217,7 @@ function drawText() {
         thirdOpacity = thirdOpacity + 0.01;
 
         button.style.display = "block";
+        button1.style.display= "block";
     }   
 
      // Reset the shadow effect after drawing the text
