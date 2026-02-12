@@ -1,5 +1,10 @@
 {
+    "name": "BikiBoruah/my_baby-s_valentine",
+    "description": "PHPMailer project",
+    "type": "project",
+    "license": "MIT",
     "require": {
-        "phpmailer/phpmailer": "^7.0.0"
+        "php": "^8.1",
+        "phpmailer/phpmailer": "^6.9"
     }
 }
