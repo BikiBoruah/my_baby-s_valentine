@@ -16,5 +16,32 @@
     </button>
     <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+      // Initialize EmailJS
+      (function(){
+          emailjs.init("_6K9kAoZjtXu9vYqQ");
+      })();
+    
+      const button = document.getElementById("valentinesButton");
+    
+      button.addEventListener("click", () => {
+        if (button.textContent === "Click Me! ❤") {
+          button.textContent = "loading...";
+    
+          emailjs.send("service_33ouevp", "template_rxksdyk", {
+            to_name: "MY BABY",
+            message: "Happy Valentine Week My Love, My Baby, EBOTI. I love you so much ❤"
+          })
+          .then(function(response) {
+            console.log("SUCCESS!", response.status, response.text);
+            button.textContent = "Check Your Email 🙃";
+          }, function(error) {
+            console.log("FAILED...", error);
+            button.textContent = "Error 😞";
+          });
+        }
+      });
+    </script>
+    
   </body>
 </html>
