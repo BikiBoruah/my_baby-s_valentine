@@ -19,13 +19,13 @@ try {
     $mail->Port       = getenv('SMTP_PORT');
 
     //Recipients
-    $mail->setFrom('boruah12biki@gmail.com', 'Mailer');         //Set the sender of the message (your email address)
-    $mail->addAddress('boruahbiki1234@gmail.com', 'Joe User');     //Add a recipient (your bae's email address)
+    $mail->setFrom('boruah12biki@gmail.com', 'YOUR BABY');         //Set the sender of the message (your email address)
+    $mail->addAddress('boruahbiki1234@gmail.com', 'MY BABY');     //Add a recipient (your bae's email address)
 
     //Content
     $mail->isHTML(true);
     $mail->Subject = 'I Love You So Much';
-    $mail->Body    = 'Happy Valentine Week My Love, My Baby, EBOTI. I love you so much. You are the best thing that has ever happened to me ❤';
+    $mail->Body    = 'Happy Valentine Week My Love, My Baby, EBOTI. I love you so much, muahhhhhhhhhhhhhhhhhhhhhhh. You are the best thing that has ever happened to me ❤';
 
     $mail->send();
     echo 'Message has been sent';
