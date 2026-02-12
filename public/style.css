@@ -31,7 +31,7 @@ canvas {
   #valentinesButton:hover {
     background-color: #1f1faa;
     color: #eee;
- 
+  }
 #valentinesQuestion {
     display: none;
     position: absolute;
